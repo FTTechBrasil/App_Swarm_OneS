@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="45dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/black"
+                android:minWidth="200dp"
+                app:srcCompat="@drawable/ic_swarm_logo_20" />
+
+            <Button
+                android:id="@+id/onoffBtn"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toStartOf="@+id/pairedBtn"
+                android:backgroundTint="@android:color/white"
+                android:minWidth="220dp"
+                android:text="Turn On/Off"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/pairedBtn"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@android:color/white"
+                android:minWidth="220dp"
+                android:text="Available Devices"
+                android:textColor="@color/black" />
+
+             <!--<Button
+                 android:id="@+id/listenBtn"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:backgroundTint="@android:color/white"
+                 android:minWidth="220dp"
+                 android:text="open connection"
+                 android:textColor="@color/black" />
+
+                 android:orientation="vertical"
+    android:gravity="center_horizontal"
+
+    -->
+
+            <ListView
+                android:id="@+id/listView1"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_below="@+id/pairedBtn"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/white"/>
+
+    <TextView
+        android:id="@+id/textOutput"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/listView1"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:scrollbars="vertical"/>
+
+    <Button
+        android:id="@+id/cleanTextBtn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textOutput"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:text="CLEAN" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="300dp"
+        android:layout_height="53dp"
+        android:layout_below="@+id/cleanTextBtn"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toStartOf="@+id/sendBtn"
+        android:background="@color/white"
+        android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/sendBtn"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/cleanTextBtn"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/white"
+            android:text="send"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20dp"/>
+
+</RelativeLayout>
+
