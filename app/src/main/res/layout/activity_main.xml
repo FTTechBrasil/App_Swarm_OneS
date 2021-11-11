@@ -81,8 +81,8 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
         android:background="@color/white"
-        android:textColor="@color/black"
-        android:scrollbars="vertical"/>
+        android:scrollbars="vertical"
+        android:textColor="@color/black" />
 
     <Button
         android:id="@+id/cleanTextBtn"
@@ -90,9 +90,30 @@
         android:layout_height="50dp"
         android:layout_below="@+id/textOutput"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
         android:text="CLEAN" />
+
+
+    <Button
+        android:id="@+id/startDataBtn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textOutput"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/cleanTextBtn"
+        android:text="start" />
+
+    <Button
+        android:id="@+id/cancelDataBtn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textOutput"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/startDataBtn"
+        android:text="cancel" />
 
     <EditText
         android:id="@+id/editText"

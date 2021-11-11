@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     public static String EXTRA_ADDRESS = "device_address";
     ListView devicelist;
     EditText mEditText;
-    Button mOnOffBtn, mPairedBtn, mCleanTextBtn, mListenBtn, mSendBtn;
+    Button mOnOffBtn, mPairedBtn, mCleanTextBtn, mListenBtn, mSendBtn, mStartDataBtn, mCancelDataBtn;
     BluetoothAdapter mBluetoothAdapter;
     BluetoothDevice[] btArray;
     ListView listView;
@@ -101,9 +101,11 @@ public class MainActivity extends AppCompatActivity {
         mSendBtn = findViewById(R.id.sendBtn);
         mEditText = findViewById(R.id.editText);
         mTextOutput = findViewById(R.id.textOutput);
-        mTextStatus = findViewById(R.id.textStatus);
+        //mTextStatus = findViewById(R.id.textStatus);
         //mListenBtn = findViewById(R.id.listenBtn);
         mCleanTextBtn = findViewById(R.id.cleanTextBtn);
+        mStartDataBtn = findViewById(R.id.startDataBtn);
+        mCancelDataBtn = findViewById(R.id.cancelDataBtn);
     }
 
     private void implemetListeners() {
@@ -169,6 +171,24 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 mTextOutput.setText("");
                 mTextOutput.computeScroll();
+            }
+        });
+
+        mStartDataBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String string = "request"; //String.valueOf(mEditText.getText());
+                sendReceive.write(string.getBytes());
+            }
+        });
+
+        mCancelDataBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String string = "cancel";//String.valueOf(mEditText.getText());
+                sendReceive.write(string.getBytes());
+                //mEditText.setText("");
+                mTextOutput.setText("");
             }
         });
     }
